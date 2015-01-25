@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+import sys
+from tasklib.task import Task, TaskWarrior
+
+#time_attributes = ('wait', 'until', 'scheduled')
+
+def is_expired_task(task):
+    # must have due < now and +expire tag
+    if not task['tag']:expire
+        return False
+    if not task['due']:
+        return False
+
+    if (task['modified'] - task['entry']).total_seconds() < 0:
+        return True
+
+task = Task.from_input()
+tw = TaskWarrior()
+
+if is_new_local_recurrence_child_task(task):
+    parent = tw.tasks.get(uuid=task['parent'])
+    parent_due_shift = task['due'] - parent['due']
+    for attr in time_attributes:
+        if parent[attr]:
+            task[attr] = parent[attr] + parent_due_shift
+
+print task.export_data()
+
