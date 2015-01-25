@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# assign tag value (defaults to +expire)
+
+# find all tasks with +expire tag
+
+# eliminate those with no due:date
+
+# eliminate those with due:date > now
+
+# modify all remaining tasks status:deleted
+
+# exit
+
