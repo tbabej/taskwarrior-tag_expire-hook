@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# assign tag value (defaults to +expire)
+# define tag value to use (defaults to +expire)
 
-# find all tasks with +expire tag
+# find all tasks with $expire_tag 
 
 # eliminate those with no due:date
 
