@@ -2,13 +2,17 @@
 
 # define tag value to use (defaults to +expire)
 
+# confirmation option (0 = no confirmation, deafult is 1)
+
 # find all tasks with $expire_tag 
 
-# eliminate those with no due:date
+# ignore those with no due:date
 
-# eliminate those with due:date > now
+# ignore those with due:date > now
 
 # modify all remaining tasks status:deleted
+
+# echo actions taken summary notification
 
 # exit
 
