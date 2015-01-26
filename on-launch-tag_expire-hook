@@ -1,16 +1,25 @@
-#!/bin/bash
+#!/bin/python
+import datetime
+from tasklib.task import TaskWarrior, Task
+
+now = datetime.datetime.utcnow()
 
 # define expire_tag value (defaults to +expire)
+EXPIRE_TAG = "expire"
 
 # confirmation option (0 = no confirmation, deafult is 1)
+# not sure what should happen, hooks cannot have confirmation, they don't have access to the console
+# imho invalid
 
 # find all tasks with $expire_tag 
-
 # ignore those with no due:date
-
 # ignore those with due:date > or = now
+tasks = tw.tasks.filter(tag__contains=EXPIRE_TAG, due__before=now)
 
 # modify all remaining tasks status:deleted
+for task in tasks:
+    task['status'] = 'deleted'
+    task.save()
 
 # echo actions taken summary notification
 
