@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# define expite_tag value (defaults to +expire)
+# define expire_tag value (defaults to +expire)
 
 # confirmation option (0 = no confirmation, deafult is 1)
 
