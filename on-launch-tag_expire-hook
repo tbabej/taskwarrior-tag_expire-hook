@@ -8,7 +8,7 @@
 
 # ignore those with no due:date
 
-# ignore those with due:date > now
+# ignore those with due:date > or = now
 
 # modify all remaining tasks status:deleted
 
